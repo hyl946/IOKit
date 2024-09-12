@@ -60,26 +60,39 @@ __BEGIN_DECLS
     @constant kIOHIDEventTypeSwipe
 */
 typedef NS_ENUM(uint32_t, IOHIDEventType) {
-    kIOHIDEventTypeNULL,
-    kIOHIDEventTypeVendorDefined,
-    kIOHIDEventTypeButton,
-    kIOHIDEventTypeKeyboard,
-    kIOHIDEventTypeTranslation,
-    kIOHIDEventTypeRotation,
-    kIOHIDEventTypeScroll,
-    kIOHIDEventTypeScale,
-    kIOHIDEventTypeZoom,
-    kIOHIDEventTypeVelocity,
-    kIOHIDEventTypeOrientation,
-    kIOHIDEventTypeDigitizer,
-    kIOHIDEventTypeAmbientLightSensor,
-    kIOHIDEventTypeAccelerometer,
-    kIOHIDEventTypeProximity,
-    kIOHIDEventTypeTemperature,
-    kIOHIDEventTypeSwipe,
-    kIOHIDEventTypeMouse,
-    kIOHIDEventTypeProgress,
-    kIOHIDEventTypeCount
+    kIOHIDEventTypeNULL,                    // 0
+        kIOHIDEventTypeVendorDefined,
+        kIOHIDEventTypeButton,
+        kIOHIDEventTypeKeyboard,
+        kIOHIDEventTypeTranslation,
+        kIOHIDEventTypeRotation,                // 5
+        kIOHIDEventTypeScroll,
+        kIOHIDEventTypeScale,
+        kIOHIDEventTypeZoom,
+        kIOHIDEventTypeVelocity,
+        kIOHIDEventTypeOrientation,             // 10
+        kIOHIDEventTypeDigitizer,
+        kIOHIDEventTypeAmbientLightSensor,
+        kIOHIDEventTypeAccelerometer,
+        kIOHIDEventTypeProximity,
+        kIOHIDEventTypeTemperature,             // 15
+        kIOHIDEventTypeSwipe,
+        kIOHIDEventTypeMouse,
+        kIOHIDEventTypeProgress,
+        kIOHIDEventTypeMultiAxisPointer,
+        kIOHIDEventTypeGyro,                    // 20
+        kIOHIDEventTypeCompass,
+        kIOHIDEventTypeZoomToggle,
+        kIOHIDEventTypeDockSwipe,               // just like kIOHIDEventTypeNavigationSwipe, but intended for consumption by Dock
+        kIOHIDEventTypeSymbolicHotKey,
+        kIOHIDEventTypePower,                   // 25
+        kIOHIDEventTypeLED,
+        kIOHIDEventTypeFluidTouchGesture,       // This will eventually superseded Navigation and Dock swipes
+        kIOHIDEventTypeBoundaryScroll,
+        kIOHIDEventTypeBiometric,
+        kIOHIDEventTypeUnicode,                 // 30
+        kIOHIDEventTypeAtmosphericPressure,
+        kIOHIDEventTypeForce = 32
 };
 
 /*!

@@ -79,6 +79,8 @@ typedef NS_ENUM(uint32_t, IOHIDEventField) {
 
     // Proximity
     kIOHIDEventFieldProximityDetectionMask = IOHIDEventFieldBase(kIOHIDEventTypeProximity),
+    kIOHIDProximityProximityTypeLevel,
+    kIOHIDProximityProximityLevel,
 
     // Orientation
     kIOHIDEventFieldOrientationRadius = IOHIDEventFieldBase(kIOHIDEventTypeOrientation),
@@ -128,7 +130,19 @@ typedef NS_ENUM(uint32_t, IOHIDEventField) {
 
     // Progress
     kIOHIDEventFieldProgressEventType = IOHIDEventFieldBase(kIOHIDEventTypeProgress),
-    kIOHIDEventFieldProgressLevel
+    kIOHIDEventFieldProgressLevel,
+    
+    // Biometric
+    kIOHIDEventFieldBiometricEventType = IOHIDEventFieldBase(kIOHIDEventTypeBiometric),
+    kIOHIDEventFieldBiometricLevel,
+    
+    //force
+    kIOHIDEventFieldForceBehavior = IOHIDEventFieldBase(kIOHIDEventTypeForce),
+    kIOHIDEventFieldForceTransitionProgress,
+    kIOHIDEventFieldForceStage,
+    kIOHIDEventFieldForceStagePressure,
+    kIOHIDEventFieldForceProgress = kIOHIDEventFieldForceTransitionProgress,
+    kIOHIDEventFieldForceLean = kIOHIDEventFieldForceStagePressure,
 };
 
 #endif /* IOHIDEventField_h */

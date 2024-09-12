@@ -199,6 +199,8 @@ int IOHIDEventGetIntegerValue(IOHIDEventRef event, IOHIDEventField field);
 IOHID3DPoint IOHIDEventGetPositionWithOptions(IOHIDEventRef event, IOHIDEventField field, IOOptionBits options);
 IOHID3DPoint IOHIDEventGetPosition(IOHIDEventRef event, IOHIDEventField field);
 
+void* IOHIDEventGetDataValue(IOHIDEventRef event, IOHIDEventField field);
+
 /*! @function IOHIDEventConformsToWithOptions
  @abstract Returns if the event or any of its children bears the specified type and options.
  @discussion If any of the top 4 bits of options is set (i.e. (options & 0xF0000000) != 0), the children of this event will not be checked. */
